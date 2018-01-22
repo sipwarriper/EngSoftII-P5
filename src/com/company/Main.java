@@ -7,7 +7,7 @@ public class Main {
         Scanner reader = new Scanner(System.in);  // Reading from System.in
         int opcio=0;
 
-        System.out.println("Benvingut al gestor d'inventari");
+        System.out.println("Benvingut a la màquina d'auto-servei de Serveis Digui i Tal");
         System.out.println("");
 
         while(opcio!=3){
