@@ -7,11 +7,11 @@ import java.util.ListIterator;
 public class Producte extends AbstractProduct {
     private int codiProducte;
     private String nomProducte;
-    private int preuProducte;
+    private double preuProducte;
     private Familia familia;
     private ArrayList<Oferta> ofertes;
 
-    Producte(int codi, String nom, int preu){
+    Producte(int codi, String nom, double preu){
         codiProducte=codi;
         nomProducte=nom;
         preuProducte=preu;
@@ -23,7 +23,7 @@ public class Producte extends AbstractProduct {
 
     @Override
     public double ObtenirPreu() {
-        return 0;
+        return preuProducte;
     }
 
     public void afegirOferta(Oferta o){
