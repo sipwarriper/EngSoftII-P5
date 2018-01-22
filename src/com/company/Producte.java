@@ -1,6 +1,8 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.ListIterator;
 
 public class Producte extends AbstractProduct {
     private int codiProducte;
@@ -28,7 +30,16 @@ public class Producte extends AbstractProduct {
         ofertes.add(o);
     }
 
-    public Oferta BuscarOfertaVigent(){
-
+    // Pre: cert
+    //Post: retorna la oferta vigent, si no nhi ha retorna null.
+    public Oferta BuscarOfertaVigent(Date avui){
+        ListIterator<Oferta> it = ofertes.listIterator();
+        boolean trobat = false;
+        Oferta temp = null;
+        while (it.hasNext() && !trobat){
+            temp = it.next();
+            trobat = temp.esVigent(avui);
+        }
+        return temp;
     }
 }

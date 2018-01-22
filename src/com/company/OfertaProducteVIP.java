@@ -16,5 +16,6 @@ public class OfertaProducteVIP extends Oferta{
     @Override
     public int ObtenirPreu() {  return descompte*prod.ObtenirPreu();    }
 
+    @Override
     public boolean esVigent(Date avui){ return (avui.before(dataFi) && avui.after(dataInici));  }
 }
