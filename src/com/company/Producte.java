@@ -25,4 +25,8 @@ public class Producte extends AbstractProduct {
     public Oferta BuscarOfertaVigent(){
 
     }
+
+    public int getCodiProducte() {
+        return codiProducte;
+    }
 }
