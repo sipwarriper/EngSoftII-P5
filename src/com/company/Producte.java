@@ -22,7 +22,7 @@ public class Producte extends AbstractProduct {
     }
 
     @Override
-    public int ObtenirPreu() {
+    public double ObtenirPreu() {
         return 0;
     }
 
