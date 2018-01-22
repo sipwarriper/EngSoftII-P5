@@ -10,6 +10,14 @@ public class Estoc {
         this.prod = prod;
     }
 
+    public void AfegirEstoc(int i){
+        quant+=i;
+    }
+
+    public void AssignarEstoc(int i){
+        quant=i;
+    }
+
     public int Quantitat(){
         return quant;
     }

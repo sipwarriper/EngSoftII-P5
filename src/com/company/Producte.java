@@ -30,6 +30,10 @@ public class Producte extends AbstractProduct {
         ofertes.add(o);
     }
 
+    public int getCodiProducte() {
+        return codiProducte;
+    }
+
     // Pre: cert
     //Post: retorna la oferta vigent, si no nhi ha retorna null.
     public Oferta BuscarOfertaVigent(Date avui){
