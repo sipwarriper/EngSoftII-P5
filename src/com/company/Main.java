@@ -8,8 +8,8 @@ import java.io.*;
 
 public class Main {
     private static Date avui;
-    private static HashMap<Integer,Producte> productes = new HashMap<>();
-    private static HashMap<Integer,Familia> families = new HashMap<>();
+    private static Map<Integer,Producte> productes = new HashMap<>();
+    private static Map<Integer,Familia> families = new HashMap<>();
     private static Botiga botiga;
     private static Magatzem magatzem;
 
@@ -33,9 +33,12 @@ public class Main {
             System.out.println("3-Sortir");
             opcio=reader.nextInt();
 
-            if(opcio==1) generarInventari();
+            if(opcio==1) {
+                generarInventari();
+            }
             else if(opcio==2){
-                PassarPerCaixa();
+                Carreto carr=new Carreto(avui,botiga);
+                PassarPerCaixa(carr,reader,avui,productes);
             }
             else if(opcio==3){
                 System.out.println("Adeu");
@@ -45,6 +48,52 @@ public class Main {
             }
         }
         reader.close();
+    }
+
+    public static void PassarPerCaixa(Carreto carr, Scanner reader, Date data, Map<Integer,Producte> productes){
+        int idproducte;
+        Oferta oferta, ofertavip, ofertafamilia, ofertafamiliavip, milloroferta;
+        ArrayList<Oferta> ofertes;
+        int descompte, descomptevip, descomptefamilia, descomptefamiliavip, temp;
+        double preu;
+        Producte prod;
+        Familia fam;
+
+        do{
+            ofertes=new ArrayList<>();
+            descomptefamilia=descomptefamiliavip=0;
+            ofertafamilia=ofertafamiliavip=null;
+            idproducte=reader.nextInt();
+            prod=productes.get(idproducte);
+            if(prod==null)System.out.println("Producte invalid");
+            else{
+                preu=prod.ObtenirPreu();
+                oferta=prod.BuscarOfertaVigent(data);
+                ofertavip=prod.BuscarOfertaVigentVIP(data);
+                fam=prod.ObtenirFamilia();
+                if(fam!=null){
+                    ofertafamilia=fam.BuscarOfertaVigent(data);
+                    ofertafamiliavip=fam.BuscarOfertaVigentVIP(data);
+                }
+                ofertes.add(oferta);
+                ofertes.add(ofertavip);
+                ofertes.add(ofertafamilia);
+                ofertes.add(ofertafamiliavip);
+                milloroferta=BuscarMillorOferta(ofertes);
+                carr.AfegirProducte(prod,milloroferta);
+            }
+        }while(idproducte!=-1);
+    }
+
+    private static Oferta BuscarMillorOferta(ArrayList<Oferta> ofertes){
+        int millordescompte=0;
+        Oferta millor=null;
+        for(Oferta o : ofertes)
+            if(o.getDescompte()>millordescompte){
+                millordescompte=o.getDescompte();
+                millor=o;
+            }
+        return millor;
     }
 
     public static void creacioFamilies(){
@@ -180,10 +229,6 @@ public class Main {
                 e.printStackTrace();
             }
         }
-    }
-    public static void PassarPerCaixa(){
-        Carreto carr=new Carreto();
-
     }
 
     public static void generarInventari(){

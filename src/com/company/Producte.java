@@ -31,6 +31,7 @@ public class Producte extends AbstractProduct {
     public void afegirOferta(OfertaProducte o){
         ofertes.add(o);
     }
+
     public void afegirOfertaVIP(OfertaProducteVIP o){
         ofertesVIP.add(o);
     }
@@ -63,9 +64,5 @@ public class Producte extends AbstractProduct {
             trobat = temp.esVigent(avui);
         }
         return temp;
-    }
-
-    public int getCodiProducte() {
-        return codiProducte;
     }
 }

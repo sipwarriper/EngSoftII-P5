@@ -1,20 +1,33 @@
 package com.company;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
+import java.util.*;
 
 public class Carreto {
-    private int preutotal;
-    private LocalDateTime datacompra;
+    private Date datacompra;
+    private Botiga botiga;
+    //private Magatzem magatzem;
+    private Map<Integer, LiniaCarreto> liniacarreto=new TreeMap<>();
 
-    private ArrayList<LiniaCarreto> linies;
+    public Carreto(Date data, Botiga b/*, Magatzem m*/){
+        datacompra=data;
+        botiga=b;
+        //magatzem=m;
+    }
 
-    public Carreto(){}
-
-    public void AfegirProducte(Producte prod, Oferta of){}
+    public void AfegirProducte(Producte prod, Oferta of){
+        LiniaCarreto lc=liniacarreto.get(prod.getCodiProducte());
+        if(lc==null)liniacarreto.put(prod.getCodiProducte(),new LiniaCarreto(this,prod,of));
+        lc.AfegirQuantitat(1);
+        botiga.TreureEstocBotiga(prod,1);
+    }
 
     public void EliminarProducte(Producte prod){}
 
-   // public int ObtenirPreuTotal(){}
+   public double ObtenirPreuTotal(){
+        double res=0;
+        for(LiniaCarreto lc : liniacarreto.values())
+            res+=1;
+        return res;
+   }
 
 }
