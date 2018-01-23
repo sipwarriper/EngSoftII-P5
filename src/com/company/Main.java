@@ -33,9 +33,7 @@ public class Main {
             System.out.println("3-Sortir");
             opcio=reader.nextInt();
 
-            if(opcio==1){
-
-            }
+            if(opcio==1) generarInventari();
             else if(opcio==2){
                 PassarPerCaixa();
             }
@@ -48,6 +46,7 @@ public class Main {
         }
         reader.close();
     }
+
     public static void creacioFamilies(){
         String Linia;
         Familia temp;
@@ -185,5 +184,14 @@ public class Main {
     public static void PassarPerCaixa(){
         Carreto carr=new Carreto();
 
+    }
+
+    public static void generarInventari(){
+        System.out.println(String.format("%-10s %-50s %15s %20s" , "Codi", "Article", "Botiga", "Magatzem"));
+        for (Producte temp : productes.values()){
+            int EstocBotiga=botiga.ConsultarEstocBotiga(temp);
+            int EstocMagatzem=magatzem.ConsultarEstocMagatzem(temp);
+            System.out.println(String.format("%-10d %-56s %9d %9s %9d %9s" , temp.getCodiProducte(), temp.getNomProducte(), EstocBotiga, "_____", EstocMagatzem, "_____"));
+        }
     }
 }

@@ -1,5 +1,7 @@
 package com.company;
-import java.util.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Magatzem {
     private String ciutat;
@@ -7,33 +9,41 @@ public class Magatzem {
     private String adreca;
     private int CP;
 
-    Map<Integer, Estoc> estoc;
-    //ArrayList<Estoc> estoc;
+    private HashMap<Integer, Estoc> estoc = new HashMap<>();
 
-    public Magatzem(String ciutat, String provincia, String adreca, int CP, Map<Integer, Estoc> est) {
+    public Magatzem(String ciutat, String provincia, String adreca, int CP) {
         this.ciutat = ciutat;
         this.provincia = provincia;
         this.adreca = adreca;
         this.CP = CP;
-        estoc=est;
     }
 
     public void AfegirEstocMagatzem(Producte prod, int quant){
-
+        Estoc e=estoc.get(prod.getCodiProducte());
+        if(e==null)e=InicialitzarEstoc(prod,quant);
+        e.AfegirEstoc(quant);
     }
 
     public void TreureEstocMagatzem(Producte prod, int quant){
-
+        AfegirEstocMagatzem(prod,-quant);
     }
 
-    public void ModificarEstocMagatzem(Producte prod, int diff){
-
+    public void ModificarEstocMagatzem(Producte prod, int quant){
+        Estoc e=estoc.get(prod.getCodiProducte());
+        if(e==null)e=InicialitzarEstoc(prod,quant);
+        e.AssignarEstoc(quant);
     }
 
-    public Estoc ConsultarEstocMagatzem(Producte prod){
-        Estoc res=null;
-        res=estoc.get(prod.getCodiProducte());
-        return res;
+    public int ConsultarEstocMagatzem(Producte prod){
+        Estoc e=estoc.get(prod.getCodiProducte());
+        if(e==null)e=InicialitzarEstoc(prod,0);
+        return e.Quantitat();
     }
 
+    private Estoc InicialitzarEstoc(Producte prod, int quant){
+        Estoc e = new Estoc(quant,prod);
+        estoc.put(prod.getCodiProducte(),e);
+        //Afegir estoc a llista de Producte?
+        return e;
+    }
 }

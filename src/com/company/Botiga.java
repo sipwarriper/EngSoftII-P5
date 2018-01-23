@@ -33,10 +33,10 @@ public class Botiga {
         e.AssignarEstoc(quant);
     }
 
-    public Estoc ConsultarEstocBotiga(Producte prod){
+    public int ConsultarEstocBotiga(Producte prod){
         Estoc e=estoc.get(prod.getCodiProducte());
         if(e==null)e=InicialitzarEstoc(prod,0);
-        return e;
+        return e.Quantitat();
     }
 
     private Estoc InicialitzarEstoc(Producte prod, int quant){
