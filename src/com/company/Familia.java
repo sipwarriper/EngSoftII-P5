@@ -32,7 +32,8 @@ public class Familia {
             temp = it.next();
             trobat = temp.esVigent(avui);
         }
-        return temp;
+        if (trobat) return temp;
+        else return null;
     }
 
     public OfertaFamiliaVIP BuscarOfertaVigentVIP(Date avui){
@@ -43,7 +44,8 @@ public class Familia {
             temp = it.next();
             trobat = temp.esVigent(avui);
         }
-        return temp;
+        if (trobat) return temp;
+        else return null;
     }
 
 }

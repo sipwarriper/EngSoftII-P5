@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="845b519d-e9b9-42ac-a599-7543037137e7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Botiga.java" afterPath="$PROJECT_DIR$/src/com/company/Botiga.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Magatzem.java" afterPath="$PROJECT_DIR$/src/com/company/Magatzem.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Familia.java" afterPath="$PROJECT_DIR$/src/com/company/Familia.java" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Producte.java" afterPath="$PROJECT_DIR$/src/com/company/Producte.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/Producte.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="314">
-              <caret line="41" column="56" lean-forward="false" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
+              <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#703#704#0" expanded="true" />
@@ -38,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Familia.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Familia.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Familia.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="71" lean-forward="false" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
+            <state relative-caret-position="408">
+              <caret line="47" column="25" lean-forward="false" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#457#458#0" expanded="true" />
@@ -64,10 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
+            <state relative-caret-position="300">
               <caret line="193" column="72" lean-forward="false" selection-start-line="193" selection-start-column="72" selection-end-line="193" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -170,11 +168,11 @@
         <option value="$PROJECT_DIR$/src/com/company/altres.txt" />
         <option value="$PROJECT_DIR$/src/com/company/LiniaCarreto.java" />
         <option value="$PROJECT_DIR$/src/com/company/Carreto.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Familia.java" />
         <option value="$PROJECT_DIR$/src/com/company/Botiga.java" />
         <option value="$PROJECT_DIR$/src/com/company/Magatzem.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Producte.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Producte.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Familia.java" />
       </list>
     </option>
   </component>
@@ -302,7 +300,7 @@
       <updated>1516623330130</updated>
       <workItem from="1516645342405" duration="9296000" />
       <workItem from="1516695990321" duration="7437000" />
-      <workItem from="1516728130866" duration="4571000" />
+      <workItem from="1516728130866" duration="5417000" />
     </task>
     <task id="LOCAL-00001" summary="producte">
       <created>1516647269434</created>
@@ -381,14 +379,22 @@
       <option name="project" value="LOCAL" />
       <updated>1516729888282</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="afegits canviat geter de estocs per geters de quantitat a botiga i magatzem&#10;fet generar inventari amb alineacio&#10;ficat getter de nom al producte">
+      <created>1516732946502</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1516732946502</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21304000" />
+    <option name="totallyTimeSpent" value="22150000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -399,7 +405,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988358" sideWeight="0.5025" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.4975" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32988358" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32988358" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -436,7 +442,8 @@
     <MESSAGE value="IO avançada&#10;-creacio de productes feta&#10;-creacio de families feta&#10;-inicialitzacio de botiga, magatzem i data actual via altres.txt feta&#10;-ofertes avançada, queda poc&#10;-millorat el format de altres.txt&#10;-Producte i Familia actualitzats&#10;-arraylists a HashMaps al main" />
     <MESSAGE value="ofertes a familia i ofertes vip a producte i familia afegides" />
     <MESSAGE value="Codi IO acabat. falta debugejarlo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Codi IO acabat. falta debugejarlo" />
+    <MESSAGE value="afegits canviat geter de estocs per geters de quantitat a botiga i magatzem&#10;fet generar inventari amb alineacio&#10;ficat getter de nom al producte" />
+    <option name="LAST_COMMIT_MESSAGE" value="afegits canviat geter de estocs per geters de quantitat a botiga i magatzem&#10;fet generar inventari amb alineacio&#10;ficat getter de nom al producte" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -900,20 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Familia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="71" lean-forward="false" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Botiga.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -932,10 +925,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Formatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="4529" column="26" lean-forward="false" selection-start-line="4529" selection-start-column="26" selection-end-line="4529" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="193" column="72" lean-forward="false" selection-start-line="193" selection-start-column="72" selection-end-line="193" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#creacioFamilies#0;class#Main#0" expanded="false" />
+            <element signature="method#creacioProductes#0;class#Main#0" expanded="false" />
+            <element signature="method#convertirAData#0;class#Main#0" expanded="false" />
+            <element signature="method#creacioOfertes#0;class#Main#0" expanded="false" />
+            <element signature="method#inicialitzarPrograma#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Producte.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
-          <caret line="41" column="56" lean-forward="false" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="56" />
+          <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#703#704#0" expanded="true" />
@@ -950,25 +966,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.base/java/util/Formatter.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Familia.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="4529" column="26" lean-forward="false" selection-start-line="4529" selection-start-column="26" selection-end-line="4529" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="193" column="72" lean-forward="false" selection-start-line="193" selection-start-column="72" selection-end-line="193" selection-end-column="72" />
+        <state relative-caret-position="408">
+          <caret line="47" column="25" lean-forward="false" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#creacioFamilies#0;class#Main#0" expanded="false" />
-            <element signature="method#creacioProductes#0;class#Main#0" expanded="false" />
-            <element signature="method#convertirAData#0;class#Main#0" expanded="false" />
-            <element signature="method#creacioOfertes#0;class#Main#0" expanded="false" />
-            <element signature="method#inicialitzarPrograma#0;class#Main#0" expanded="false" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
           </folding>
         </state>
       </provider>

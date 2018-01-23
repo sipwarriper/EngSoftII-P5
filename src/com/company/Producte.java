@@ -52,7 +52,8 @@ public class Producte extends AbstractProduct {
             temp = it.next();
             trobat = temp.esVigent(avui);
         }
-        return temp;
+        if (trobat) return temp;
+        else return null;
     }
 
     public OfertaProducteVIP BuscarOfertaVigentVIP(Date avui){
@@ -63,6 +64,7 @@ public class Producte extends AbstractProduct {
             temp = it.next();
             trobat = temp.esVigent(avui);
         }
-        return temp;
+        if (trobat) return temp;
+        else return null;
     }
 }
