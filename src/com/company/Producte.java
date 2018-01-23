@@ -11,10 +11,11 @@ public class Producte extends AbstractProduct {
     private Familia familia;
     private ArrayList<Oferta> ofertes;
 
-    Producte(int codi, String nom, double preu){
+    Producte(int codi, String nom, double preu, Familia fam){
         codiProducte=codi;
         nomProducte=nom;
         preuProducte=preu;
+        familia = fam;
     }
 
     public Familia ObtenirFamilia(){
