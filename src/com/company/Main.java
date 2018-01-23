@@ -67,7 +67,7 @@ public class Main {
             descomptefamilia=descomptefamiliavip=0;
             ofertafamilia=ofertafamiliavip=null;
             prod=productes.get(idproducte);
-            if(prod==null)System.out.println("Producte invalid");
+            if(prod==null && idproducte!=-1)System.out.println("Producte invalid");
             else{
                 preu=prod.ObtenirPreu();
                 oferta=prod.BuscarOfertaVigent(data);
@@ -87,6 +87,7 @@ public class Main {
         }while(idproducte!=-1);
 
         System.out.println("Ticket:");
+        System.out.println("");
         System.out.println("Producte quantitat preu");
         carr.Mostrar();
     }
