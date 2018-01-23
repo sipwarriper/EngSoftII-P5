@@ -9,7 +9,7 @@ public class Magatzem {
     private String adreca;
     private int CP;
 
-    private HashMap<Integer, Estoc> estoc = new HashMap<>();
+    private Map<Integer, Estoc> estoc = new HashMap<>();
 
     public Magatzem(String ciutat, String provincia, String adreca, int CP) {
         this.ciutat = ciutat;
