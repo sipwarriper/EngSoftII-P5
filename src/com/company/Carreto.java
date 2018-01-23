@@ -8,10 +8,9 @@ public class Carreto {
     //private Magatzem magatzem;
     private Map<Integer, LiniaCarreto> liniacarreto=new TreeMap<>();
 
-    public Carreto(Date data, Botiga b/*, Magatzem m*/){
+    public Carreto(Date data, Botiga b){
         datacompra=data;
         botiga=b;
-        //magatzem=m;
     }
 
     public void AfegirProducte(Producte prod, Oferta of){

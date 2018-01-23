@@ -26,7 +26,5 @@ public class LiniaCarreto {
     public void Mostrar(){
         System.out.println(prod.getNomProducte()+" "+quantitat+" "+ObtenirPreu());
     }
-    //public int obtenirQuantitat(Producte prod){}
 
-    //public Oferta obtenirOferta(Producte prod){} //retorna int o oferta?
 }

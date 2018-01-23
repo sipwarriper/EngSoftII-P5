@@ -24,9 +24,9 @@ public class Main {
         int opcio=0;
 
         System.out.println("Benvingut a la màquina d'auto-servei de Serveis Digui i Tal");
-        System.out.println("");
 
         while(opcio!=3){
+            System.out.println("");
             System.out.println("Tria una opcio:");
             System.out.println("1-Generar llistat inventari");
             System.out.println("2-Passar per caixa");
@@ -67,7 +67,7 @@ public class Main {
             descomptefamilia=descomptefamiliavip=0;
             ofertafamilia=ofertafamiliavip=null;
             prod=productes.get(idproducte);
-            if(prod==null && idproducte!=-1)System.out.println("Producte invalid");
+            if(prod==null){if(idproducte!=-1)System.out.println("Producte invalid");}
             else{
                 preu=prod.ObtenirPreu();
                 oferta=prod.BuscarOfertaVigent(data);
@@ -86,9 +86,10 @@ public class Main {
             }
         }while(idproducte!=-1);
 
-        System.out.println("Ticket:");
         System.out.println("");
+        System.out.println("Ticket:");
         System.out.println("Producte quantitat preu");
+        System.out.println("");
         carr.Mostrar();
     }
 

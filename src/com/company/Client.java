@@ -5,7 +5,6 @@ public class Client {
     private int numTarg;
     private boolean anonim;
     private int punts;
-    //private Historic;
 
     Client(){}
 
@@ -18,9 +17,7 @@ public class Client {
         return anonim;
     }
 
-    public void afegirCompra(Carreto carr){
-
-    }
+    public void afegirCompra(Carreto carr){}
 
     public int ConsultarPunts(){
         return punts;
