@@ -9,7 +9,8 @@ public class Producte extends AbstractProduct {
     private String nomProducte;
     private double preuProducte;
     private Familia familia;
-    private ArrayList<Oferta> ofertes;
+    private ArrayList<OfertaProducte> ofertes;
+    private ArrayList<OfertaProducteVIP> ofertesVIP;
 
     Producte(int codi, String nom, double preu, Familia fam){
         codiProducte=codi;
@@ -27,8 +28,11 @@ public class Producte extends AbstractProduct {
         return preuProducte;
     }
 
-    public void afegirOferta(Oferta o){
+    public void afegirOferta(OfertaProducte o){
         ofertes.add(o);
+    }
+    public void afegirOfertaVIP(OfertaProducteVIP o){
+        ofertesVIP.add(o);
     }
 
     public int getCodiProducte() {
@@ -37,10 +41,21 @@ public class Producte extends AbstractProduct {
 
     // Pre: cert
     //Post: retorna la oferta vigent, si no nhi ha retorna null.
-    public Oferta BuscarOfertaVigent(Date avui){
-        ListIterator<Oferta> it = ofertes.listIterator();
+    public OfertaProducte BuscarOfertaVigent(Date avui){
+        ListIterator<OfertaProducte> it = ofertes.listIterator();
         boolean trobat = false;
-        Oferta temp = null;
+        OfertaProducte temp = null;
+        while (it.hasNext() && !trobat){
+            temp = it.next();
+            trobat = temp.esVigent(avui);
+        }
+        return temp;
+    }
+
+    public OfertaProducteVIP BuscarOfertaVigentVIP(Date avui){
+        ListIterator<OfertaProducteVIP> it = ofertesVIP.listIterator();
+        boolean trobat = false;
+        OfertaProducteVIP temp = null;
         while (it.hasNext() && !trobat){
             temp = it.next();
             trobat = temp.esVigent(avui);
