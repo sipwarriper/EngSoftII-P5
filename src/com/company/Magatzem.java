@@ -34,10 +34,10 @@ public class Magatzem {
         e.AssignarEstoc(quant);
     }
 
-    public Estoc ConsultarEstocMagatzem(Producte prod){
+    public int ConsultarEstocMagatzem(Producte prod){
         Estoc e=estoc.get(prod.getCodiProducte());
         if(e==null)e=InicialitzarEstoc(prod,0);
-        return e;
+        return e.Quantitat();
     }
 
     private Estoc InicialitzarEstoc(Producte prod, int quant){
