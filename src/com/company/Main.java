@@ -60,10 +60,12 @@ public class Main {
         Familia fam;
 
         do{
+            System.out.print("Entra l'id del producte o -1 per acabar: ");
+            idproducte=reader.nextInt();
+
             ofertes=new ArrayList<>();
             descomptefamilia=descomptefamiliavip=0;
             ofertafamilia=ofertafamiliavip=null;
-            idproducte=reader.nextInt();
             prod=productes.get(idproducte);
             if(prod==null)System.out.println("Producte invalid");
             else{
@@ -83,13 +85,17 @@ public class Main {
                 carr.AfegirProducte(prod,milloroferta);
             }
         }while(idproducte!=-1);
+
+        System.out.println("Ticket:");
+        System.out.println("Producte quantitat preu");
+        carr.Mostrar();
     }
 
     private static Oferta BuscarMillorOferta(ArrayList<Oferta> ofertes){
         int millordescompte=0;
         Oferta millor=null;
         for(Oferta o : ofertes)
-            if(o.getDescompte()>millordescompte){
+            if(o!=null && o.getDescompte()>millordescompte){
                 millordescompte=o.getDescompte();
                 millor=o;
             }

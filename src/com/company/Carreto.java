@@ -16,7 +16,10 @@ public class Carreto {
 
     public void AfegirProducte(Producte prod, Oferta of){
         LiniaCarreto lc=liniacarreto.get(prod.getCodiProducte());
-        if(lc==null)liniacarreto.put(prod.getCodiProducte(),new LiniaCarreto(this,prod,of));
+        if(lc==null){
+            liniacarreto.put(prod.getCodiProducte(),new LiniaCarreto(this,prod,of));
+            lc=liniacarreto.get(prod.getCodiProducte());
+        }
         lc.AfegirQuantitat(1);
         botiga.TreureEstocBotiga(prod,1);
     }
@@ -28,6 +31,11 @@ public class Carreto {
         for(LiniaCarreto lc : liniacarreto.values())
             res+=1;
         return res;
+   }
+
+   public void Mostrar(){
+        for(LiniaCarreto lc : liniacarreto.values())
+            lc.Mostrar();
    }
 
 }
