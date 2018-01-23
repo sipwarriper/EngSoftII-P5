@@ -133,17 +133,15 @@ public class Main {
                     Date inici = convertirAData(data[2]);
                     Date fi = convertirAData(data[3]);
                     int desc = Integer.parseInt(data[1]);
-                    if (tipus == 0 ){
-                        //oferta normal producte
+                    if (tipus == 0 || tipus == 2){
+                        Producte p = productes.get(ref);
+                        if (tipus==0) p.afegirOferta(new OfertaProducte(p,desc,inici, fi));
+                        else  p.afegirOfertaVIP(new OfertaProducteVIP(p,desc,inici, fi));
                     }
-                    else if (tipus == 1){
-                        //oferta normal familia
-                    }
-                    else if (tipus == 2){
-                        //oferta VIP producte
-                    }
-                    else if (tipus == 3){
-                        //oferta VIP familia
+                    else if (tipus == 1|| tipus == 3){
+                        Familia f = families.get(ref);
+                        if (tipus==1) f.afegirOferta(new OfertaFamilia(null,f,desc,inici,fi));
+                        else  f.afegirOfertaVIP(new OfertaFamiliaVIP(null,f,desc,inici,fi));
                     }
                 }
             } catch (java.io.IOException e){
