@@ -9,8 +9,8 @@ public class Producte extends AbstractProduct {
     private String nomProducte;
     private double preuProducte;
     private Familia familia;
-    private ArrayList<OfertaProducte> ofertes;
-    private ArrayList<OfertaProducteVIP> ofertesVIP;
+    private ArrayList<OfertaProducte> ofertes = new ArrayList<>();
+    private ArrayList<OfertaProducteVIP> ofertesVIP = new ArrayList<>();
 
     Producte(int codi, String nom, double preu, Familia fam){
         codiProducte=codi;

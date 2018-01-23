@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Magatzem {
@@ -8,7 +9,7 @@ public class Magatzem {
     private String adreca;
     private int CP;
 
-    private Map<Integer, Estoc> estoc;
+    private HashMap<Integer, Estoc> estoc = new HashMap<>();
 
     public Magatzem(String ciutat, String provincia, String adreca, int CP) {
         this.ciutat = ciutat;

@@ -8,12 +8,18 @@ import java.io.*;
 
 public class Main {
     private static Date avui;
-    private static HashMap<Integer,Producte> productes;
-    private static HashMap<Integer,Familia> families;
+    private static HashMap<Integer,Producte> productes = new HashMap<>();
+    private static HashMap<Integer,Familia> families = new HashMap<>();
     private static Botiga botiga;
     private static Magatzem magatzem;
 
     public static void main(String[] args) {
+
+        inicialitzarPrograma();
+        creacioFamilies();
+        creacioProductes();
+        creacioOfertes();
+
         Scanner reader = new Scanner(System.in);  // Reading from System.in
         int opcio=0;
 
@@ -113,7 +119,7 @@ public class Main {
         return date;
     }
 
-    public static void cracioOfertes(){
+    public static void creacioOfertes(){
         String Linia;
         Familia temp;
 
@@ -133,16 +139,17 @@ public class Main {
                     Date inici = convertirAData(data[2]);
                     Date fi = convertirAData(data[3]);
                     int desc = Integer.parseInt(data[1]);
-                    if (tipus == 0 || tipus == 2){
+                    if (tipus == 1 || tipus == 3){//ofertes i ofertesVIP de producte
                         Producte p = productes.get(ref);
-                        if (tipus==0) p.afegirOferta(new OfertaProducte(p,desc,inici, fi));
+                        if (tipus==1) p.afegirOferta(new OfertaProducte(p,desc,inici, fi));
                         else  p.afegirOfertaVIP(new OfertaProducteVIP(p,desc,inici, fi));
                     }
-                    else if (tipus == 1|| tipus == 3){
+                    else if (tipus == 0|| tipus == 2){//ofertes i ofertes VIP de familia
                         Familia f = families.get(ref);
-                        if (tipus==1) f.afegirOferta(new OfertaFamilia(null,f,desc,inici,fi));
+                        if (tipus==0) f.afegirOferta(new OfertaFamilia(null,f,desc,inici,fi));
                         else  f.afegirOfertaVIP(new OfertaFamiliaVIP(null,f,desc,inici,fi));
                     }
+                    Linia = sOfertes.readLine();
                 }
             } catch (java.io.IOException e){
                 e.printStackTrace();
@@ -156,7 +163,7 @@ public class Main {
 
         BufferedReader sAltres = null;
         try {
-            sAltres = new BufferedReader(new FileReader("productes.txt"));
+            sAltres = new BufferedReader(new FileReader("altres.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

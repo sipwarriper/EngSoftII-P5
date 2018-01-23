@@ -15,6 +15,6 @@ public class Carreto {
 
     public void EliminarProducte(Producte prod){}
 
-    public int ObtenirPreuTotal(){}
+   // public int ObtenirPreuTotal(){}
 
 }

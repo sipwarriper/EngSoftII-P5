@@ -8,7 +8,7 @@ public class Botiga {
     private String adreca;
     private int CP;
 
-    private Map<Integer, Estoc> estoc;
+    private HashMap<Integer, Estoc> estoc = new HashMap<>();
 
     public Botiga(String ciutat, String provincia, String adreca, int CP) {
         this.ciutat = ciutat;

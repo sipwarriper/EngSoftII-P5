@@ -5,7 +5,7 @@ public class LiniaCarreto {
     private int oferta;
     private Carreto carr;
 
-    public int obtenirQuantitat(Producte prod){}
+    //public int obtenirQuantitat(Producte prod){}
 
-    public Oferta obtenirOferta(Producte prod){} //retorna int o oferta?
+    //public Oferta obtenirOferta(Producte prod){} //retorna int o oferta?
 }

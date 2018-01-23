@@ -7,8 +7,8 @@ import java.util.ListIterator;
 public class Familia {
     private int familia;
     private String nomfamilia;
-    private ArrayList<OfertaFamilia> ofertes;
-    private ArrayList<OfertaFamiliaVIP> ofertesVIP;
+    private ArrayList<OfertaFamilia> ofertes = new ArrayList<>();
+    private ArrayList<OfertaFamiliaVIP> ofertesVIP = new ArrayList<>();
 
     Familia(int codi, String nom){
         familia = codi;
