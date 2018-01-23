@@ -1,0 +1,5 @@
+0 Pasta
+1 arroz
+2 derivats_animals
+3 congelats
+4 dolços

@@ -15,9 +15,9 @@ public class OfertaProducte extends Oferta{
     }
 
     @Override
-    public int ObtenirPreu() {
-        return descompte*prod.ObtenirPreu();
+    public double ObtenirPreu() {
+        return (descompte/100.0)*prod.ObtenirPreu();
     }
-
+    @Override
     public boolean esVigent(Date avui){ return (avui.before(dataFi) && avui.after(dataInici));  }
 }

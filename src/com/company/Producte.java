@@ -1,18 +1,22 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.ListIterator;
 
 public class Producte extends AbstractProduct {
     private int codiProducte;
     private String nomProducte;
-    private int preuProducte;
+    private double preuProducte;
     private Familia familia;
-    private ArrayList<Oferta> ofertes;
+    private ArrayList<OfertaProducte> ofertes = new ArrayList<>();
+    private ArrayList<OfertaProducteVIP> ofertesVIP = new ArrayList<>();
 
-    Producte(int codi, String nom, int preu){
+    Producte(int codi, String nom, double preu, Familia fam){
         codiProducte=codi;
         nomProducte=nom;
         preuProducte=preu;
+        familia = fam;
     }
 
     public Familia ObtenirFamilia(){
@@ -20,16 +24,43 @@ public class Producte extends AbstractProduct {
     }
 
     @Override
-    public int ObtenirPreu() {
-        return 0;
+    public double ObtenirPreu() {
+        return preuProducte;
     }
 
-    public void afegirOferta(Oferta o){
+    public void afegirOferta(OfertaProducte o){
         ofertes.add(o);
     }
+    public void afegirOfertaVIP(OfertaProducteVIP o){
+        ofertesVIP.add(o);
+    }
 
-    public Oferta BuscarOfertaVigent(){
+    public int getCodiProducte() {
+        return codiProducte;
+    }
 
+    // Pre: cert
+    //Post: retorna la oferta vigent, si no nhi ha retorna null.
+    public OfertaProducte BuscarOfertaVigent(Date avui){
+        ListIterator<OfertaProducte> it = ofertes.listIterator();
+        boolean trobat = false;
+        OfertaProducte temp = null;
+        while (it.hasNext() && !trobat){
+            temp = it.next();
+            trobat = temp.esVigent(avui);
+        }
+        return temp;
+    }
+
+    public OfertaProducteVIP BuscarOfertaVigentVIP(Date avui){
+        ListIterator<OfertaProducteVIP> it = ofertesVIP.listIterator();
+        boolean trobat = false;
+        OfertaProducteVIP temp = null;
+        while (it.hasNext() && !trobat){
+            temp = it.next();
+            trobat = temp.esVigent(avui);
+        }
+        return temp;
     }
 
     public int getCodiProducte() {

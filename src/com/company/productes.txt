@@ -1,0 +1,8 @@
+0 0 Espagetis_Gallo 10 100 120
+1 1 Arroz_curt 20 60 100
+2 1 Arroz_llarg 15 30 100
+3 2 Pack_12_ous 10 20 150
+4 3 Pizza_4_formatges 20 20 300
+5 3 Anelles_calamar 10 30 100
+6 4 Xocolata_amb_llet 20 20 200
+7 4 Xocolata_blanca 20 20 220
