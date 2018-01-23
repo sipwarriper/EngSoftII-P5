@@ -18,7 +18,9 @@ public class LiniaCarreto {
     }
 
     public double ObtenirPreu(){
-        return oferta.ObtenirPreu()*quantitat;
+        double of=1;
+        if(oferta!=null)of=oferta.ObtenirPreu();
+        return of*quantitat;
     }
 
     public void Mostrar(){
